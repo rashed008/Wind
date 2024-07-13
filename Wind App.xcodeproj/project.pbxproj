@@ -17,6 +17,12 @@
 		CEDAAE082C42E5E300A90F87 /* Wind_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDAAE072C42E5E300A90F87 /* Wind_AppUITests.swift */; };
 		CEDAAE0A2C42E5E300A90F87 /* Wind_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDAAE092C42E5E300A90F87 /* Wind_AppUITestsLaunchTests.swift */; };
 		CEDAAE272C42F0C400A90F87 /* Circular Std Font.otf in Resources */ = {isa = PBXBuildFile; fileRef = CEDAAE242C42EE3100A90F87 /* Circular Std Font.otf */; };
+		CEDAAE292C430C2E00A90F87 /* ExtensionUIFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDAAE282C430C2E00A90F87 /* ExtensionUIFonts.swift */; };
+		CEDAAE2B2C430C8200A90F87 /* ExtensionUIText+OTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDAAE2A2C430C8200A90F87 /* ExtensionUIText+OTP.swift */; };
+		CEDAAE2D2C430D0B00A90F87 /* CircularStd-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEDAAE2C2C430D0B00A90F87 /* CircularStd-Bold.ttf */; };
+		CEDAAE2F2C4315CF00A90F87 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDAAE2E2C4315CF00A90F87 /* Utils.swift */; };
+		CEDAAE342C431F6D00A90F87 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CEDAAE332C431F6D00A90F87 /* Alamofire */; };
+		CEDAAE362C431F7300A90F87 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CEDAAE352C431F7300A90F87 /* IQKeyboardManagerSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,10 @@
 		CEDAAE072C42E5E300A90F87 /* Wind_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wind_AppUITests.swift; sourceTree = "<group>"; };
 		CEDAAE092C42E5E300A90F87 /* Wind_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wind_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CEDAAE242C42EE3100A90F87 /* Circular Std Font.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circular Std Font.otf"; sourceTree = "<group>"; };
+		CEDAAE282C430C2E00A90F87 /* ExtensionUIFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIFonts.swift; sourceTree = "<group>"; };
+		CEDAAE2A2C430C8200A90F87 /* ExtensionUIText+OTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionUIText+OTP.swift"; sourceTree = "<group>"; };
+		CEDAAE2C2C430D0B00A90F87 /* CircularStd-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Bold.ttf"; sourceTree = "<group>"; };
+		CEDAAE2E2C4315CF00A90F87 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEDAAE342C431F6D00A90F87 /* Alamofire in Frameworks */,
+				CEDAAE362C431F7300A90F87 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +97,7 @@
 				CEDAADFC2C42E5E300A90F87 /* Wind AppTests */,
 				CEDAAE062C42E5E300A90F87 /* Wind AppUITests */,
 				CEDAADE42C42E5E200A90F87 /* Products */,
+				CEDAAE322C431F2A00A90F87 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,6 +182,7 @@
 		CEDAAE1A2C42EBD700A90F87 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				CEDAAE2E2C4315CF00A90F87 /* Utils.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -176,6 +190,8 @@
 		CEDAAE1B2C42EBDB00A90F87 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				CEDAAE282C430C2E00A90F87 /* ExtensionUIFonts.swift */,
+				CEDAAE2A2C430C8200A90F87 /* ExtensionUIText+OTP.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -237,9 +253,17 @@
 		CEDAAE232C42EDBF00A90F87 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				CEDAAE2C2C430D0B00A90F87 /* CircularStd-Bold.ttf */,
 				CEDAAE242C42EE3100A90F87 /* Circular Std Font.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CEDAAE322C431F2A00A90F87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +282,10 @@
 			dependencies = (
 			);
 			name = "Wind App";
+			packageProductDependencies = (
+				CEDAAE332C431F6D00A90F87 /* Alamofire */,
+				CEDAAE352C431F7300A90F87 /* IQKeyboardManagerSwift */,
+			);
 			productName = "Wind App";
 			productReference = CEDAADE32C42E5E200A90F87 /* Wind App.app */;
 			productType = "com.apple.product-type.application";
@@ -330,6 +358,10 @@
 				Base,
 			);
 			mainGroup = CEDAADDA2C42E5E200A90F87;
+			packageReferences = (
+				CEDAAE302C431C6300A90F87 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				CEDAAE312C431CA100A90F87 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = CEDAADE42C42E5E200A90F87 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -346,6 +378,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEDAAE2D2C430D0B00A90F87 /* CircularStd-Bold.ttf in Resources */,
 				CEDAADF02C42E5E300A90F87 /* Assets.xcassets in Resources */,
 				CEDAADF32C42E5E300A90F87 /* Base in Resources */,
 				CEDAADEE2C42E5E200A90F87 /* Base in Resources */,
@@ -375,8 +408,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEDAADEB2C42E5E200A90F87 /* SendFundOTPViewController.swift in Sources */,
+				CEDAAE2B2C430C8200A90F87 /* ExtensionUIText+OTP.swift in Sources */,
 				CEDAADE72C42E5E200A90F87 /* AppDelegate.swift in Sources */,
+				CEDAAE292C430C2E00A90F87 /* ExtensionUIFonts.swift in Sources */,
 				CEDAADE92C42E5E200A90F87 /* SceneDelegate.swift in Sources */,
+				CEDAAE2F2C4315CF00A90F87 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -723,6 +759,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CEDAAE302C431C6300A90F87 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.3;
+			};
+		};
+		CEDAAE312C431CA100A90F87 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CEDAAE332C431F6D00A90F87 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEDAAE312C431CA100A90F87 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		CEDAAE352C431F7300A90F87 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEDAAE302C431C6300A90F87 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CEDAADDB2C42E5E200A90F87 /* Project object */;
 }
