@@ -1,0 +1,728 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CEDAADE72C42E5E200A90F87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDAADE62C42E5E200A90F87 /* AppDelegate.swift */; };
+		CEDAADE92C42E5E200A90F87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDAADE82C42E5E200A90F87 /* SceneDelegate.swift */; };
+		CEDAADEB2C42E5E200A90F87 /* SendFundOTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDAADEA2C42E5E200A90F87 /* SendFundOTPViewController.swift */; };
+		CEDAADEE2C42E5E200A90F87 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CEDAADED2C42E5E200A90F87 /* Base */; };
+		CEDAADF02C42E5E300A90F87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDAADEF2C42E5E300A90F87 /* Assets.xcassets */; };
+		CEDAADF32C42E5E300A90F87 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CEDAADF22C42E5E300A90F87 /* Base */; };
+		CEDAADFE2C42E5E300A90F87 /* Wind_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDAADFD2C42E5E300A90F87 /* Wind_AppTests.swift */; };
+		CEDAAE082C42E5E300A90F87 /* Wind_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDAAE072C42E5E300A90F87 /* Wind_AppUITests.swift */; };
+		CEDAAE0A2C42E5E300A90F87 /* Wind_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDAAE092C42E5E300A90F87 /* Wind_AppUITestsLaunchTests.swift */; };
+		CEDAAE272C42F0C400A90F87 /* Circular Std Font.otf in Resources */ = {isa = PBXBuildFile; fileRef = CEDAAE242C42EE3100A90F87 /* Circular Std Font.otf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CEDAADFA2C42E5E300A90F87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEDAADDB2C42E5E200A90F87 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEDAADE22C42E5E200A90F87;
+			remoteInfo = "Wind App";
+		};
+		CEDAAE042C42E5E300A90F87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEDAADDB2C42E5E200A90F87 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEDAADE22C42E5E200A90F87;
+			remoteInfo = "Wind App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CEDAADE32C42E5E200A90F87 /* Wind App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wind App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEDAADE62C42E5E200A90F87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CEDAADE82C42E5E200A90F87 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CEDAADEA2C42E5E200A90F87 /* SendFundOTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFundOTPViewController.swift; sourceTree = "<group>"; };
+		CEDAADED2C42E5E200A90F87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CEDAADEF2C42E5E300A90F87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEDAADF22C42E5E300A90F87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CEDAADF42C42E5E300A90F87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEDAADF92C42E5E300A90F87 /* Wind AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wind AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEDAADFD2C42E5E300A90F87 /* Wind_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wind_AppTests.swift; sourceTree = "<group>"; };
+		CEDAAE032C42E5E300A90F87 /* Wind AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wind AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEDAAE072C42E5E300A90F87 /* Wind_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wind_AppUITests.swift; sourceTree = "<group>"; };
+		CEDAAE092C42E5E300A90F87 /* Wind_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wind_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CEDAAE242C42EE3100A90F87 /* Circular Std Font.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circular Std Font.otf"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEDAADE02C42E5E200A90F87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDAADF62C42E5E300A90F87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDAAE002C42E5E300A90F87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CEDAADDA2C42E5E200A90F87 = {
+			isa = PBXGroup;
+			children = (
+				CEDAADE52C42E5E200A90F87 /* Wind App */,
+				CEDAADFC2C42E5E300A90F87 /* Wind AppTests */,
+				CEDAAE062C42E5E300A90F87 /* Wind AppUITests */,
+				CEDAADE42C42E5E200A90F87 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CEDAADE42C42E5E200A90F87 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEDAADE32C42E5E200A90F87 /* Wind App.app */,
+				CEDAADF92C42E5E300A90F87 /* Wind AppTests.xctest */,
+				CEDAAE032C42E5E300A90F87 /* Wind AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEDAADE52C42E5E200A90F87 /* Wind App */ = {
+			isa = PBXGroup;
+			children = (
+				CEDAAE1D2C42EBE100A90F87 /* Application */,
+				CEDAAE1C2C42EBDF00A90F87 /* Constant */,
+				CEDAAE1B2C42EBDB00A90F87 /* Extensions */,
+				CEDAAE1A2C42EBD700A90F87 /* Utility */,
+				CEDAAE192C42EBD500A90F87 /* Helper */,
+				CEDAAE182C42EBD300A90F87 /* Screen */,
+				CEDAAE172C42EBD100A90F87 /* Storyboard */,
+				CEDAAE162C42EBCF00A90F87 /* Resources */,
+				CEDAADF42C42E5E300A90F87 /* Info.plist */,
+			);
+			path = "Wind App";
+			sourceTree = "<group>";
+		};
+		CEDAADFC2C42E5E300A90F87 /* Wind AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				CEDAADFD2C42E5E300A90F87 /* Wind_AppTests.swift */,
+			);
+			path = "Wind AppTests";
+			sourceTree = "<group>";
+		};
+		CEDAAE062C42E5E300A90F87 /* Wind AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CEDAAE072C42E5E300A90F87 /* Wind_AppUITests.swift */,
+				CEDAAE092C42E5E300A90F87 /* Wind_AppUITestsLaunchTests.swift */,
+			);
+			path = "Wind AppUITests";
+			sourceTree = "<group>";
+		};
+		CEDAAE162C42EBCF00A90F87 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CEDAAE232C42EDBF00A90F87 /* Fonts */,
+				CEDAADEF2C42E5E300A90F87 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CEDAAE172C42EBD100A90F87 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				CEDAADEC2C42E5E200A90F87 /* Main.storyboard */,
+				CEDAADF12C42E5E300A90F87 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		CEDAAE182C42EBD300A90F87 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CEDAAE202C42EC5A00A90F87 /* Model */,
+				CEDAAE1F2C42EC5800A90F87 /* View */,
+				CEDAAE1E2C42EC5500A90F87 /* ViewModel */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		CEDAAE192C42EBD500A90F87 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		CEDAAE1A2C42EBD700A90F87 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		CEDAAE1B2C42EBDB00A90F87 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CEDAAE1C2C42EBDF00A90F87 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		CEDAAE1D2C42EBE100A90F87 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				CEDAADE62C42E5E200A90F87 /* AppDelegate.swift */,
+				CEDAADE82C42E5E200A90F87 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		CEDAAE1E2C42EC5500A90F87 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CEDAAE1F2C42EC5800A90F87 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEDAAE222C42EC7500A90F87 /* Controller */,
+				CEDAAE212C42EC7100A90F87 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CEDAAE202C42EC5A00A90F87 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CEDAAE212C42EC7100A90F87 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CEDAAE222C42EC7500A90F87 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEDAADEA2C42E5E200A90F87 /* SendFundOTPViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CEDAAE232C42EDBF00A90F87 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CEDAAE242C42EE3100A90F87 /* Circular Std Font.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEDAADE22C42E5E200A90F87 /* Wind App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEDAAE0D2C42E5E300A90F87 /* Build configuration list for PBXNativeTarget "Wind App" */;
+			buildPhases = (
+				CEDAADDF2C42E5E200A90F87 /* Sources */,
+				CEDAADE02C42E5E200A90F87 /* Frameworks */,
+				CEDAADE12C42E5E200A90F87 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Wind App";
+			productName = "Wind App";
+			productReference = CEDAADE32C42E5E200A90F87 /* Wind App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CEDAADF82C42E5E300A90F87 /* Wind AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEDAAE102C42E5E300A90F87 /* Build configuration list for PBXNativeTarget "Wind AppTests" */;
+			buildPhases = (
+				CEDAADF52C42E5E300A90F87 /* Sources */,
+				CEDAADF62C42E5E300A90F87 /* Frameworks */,
+				CEDAADF72C42E5E300A90F87 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEDAADFB2C42E5E300A90F87 /* PBXTargetDependency */,
+			);
+			name = "Wind AppTests";
+			productName = "Wind AppTests";
+			productReference = CEDAADF92C42E5E300A90F87 /* Wind AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CEDAAE022C42E5E300A90F87 /* Wind AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEDAAE132C42E5E300A90F87 /* Build configuration list for PBXNativeTarget "Wind AppUITests" */;
+			buildPhases = (
+				CEDAADFF2C42E5E300A90F87 /* Sources */,
+				CEDAAE002C42E5E300A90F87 /* Frameworks */,
+				CEDAAE012C42E5E300A90F87 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEDAAE052C42E5E300A90F87 /* PBXTargetDependency */,
+			);
+			name = "Wind AppUITests";
+			productName = "Wind AppUITests";
+			productReference = CEDAAE032C42E5E300A90F87 /* Wind AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEDAADDB2C42E5E200A90F87 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					CEDAADE22C42E5E200A90F87 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					CEDAADF82C42E5E300A90F87 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = CEDAADE22C42E5E200A90F87;
+					};
+					CEDAAE022C42E5E300A90F87 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = CEDAADE22C42E5E200A90F87;
+					};
+				};
+			};
+			buildConfigurationList = CEDAADDE2C42E5E200A90F87 /* Build configuration list for PBXProject "Wind App" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEDAADDA2C42E5E200A90F87;
+			productRefGroup = CEDAADE42C42E5E200A90F87 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEDAADE22C42E5E200A90F87 /* Wind App */,
+				CEDAADF82C42E5E300A90F87 /* Wind AppTests */,
+				CEDAAE022C42E5E300A90F87 /* Wind AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEDAADE12C42E5E200A90F87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDAADF02C42E5E300A90F87 /* Assets.xcassets in Resources */,
+				CEDAADF32C42E5E300A90F87 /* Base in Resources */,
+				CEDAADEE2C42E5E200A90F87 /* Base in Resources */,
+				CEDAAE272C42F0C400A90F87 /* Circular Std Font.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDAADF72C42E5E300A90F87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDAAE012C42E5E300A90F87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEDAADDF2C42E5E200A90F87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDAADEB2C42E5E200A90F87 /* SendFundOTPViewController.swift in Sources */,
+				CEDAADE72C42E5E200A90F87 /* AppDelegate.swift in Sources */,
+				CEDAADE92C42E5E200A90F87 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDAADF52C42E5E300A90F87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDAADFE2C42E5E300A90F87 /* Wind_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDAADFF2C42E5E300A90F87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDAAE0A2C42E5E300A90F87 /* Wind_AppUITestsLaunchTests.swift in Sources */,
+				CEDAAE082C42E5E300A90F87 /* Wind_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CEDAADFB2C42E5E300A90F87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEDAADE22C42E5E200A90F87 /* Wind App */;
+			targetProxy = CEDAADFA2C42E5E300A90F87 /* PBXContainerItemProxy */;
+		};
+		CEDAAE052C42E5E300A90F87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEDAADE22C42E5E200A90F87 /* Wind App */;
+			targetProxy = CEDAAE042C42E5E300A90F87 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CEDAADEC2C42E5E200A90F87 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEDAADED2C42E5E200A90F87 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CEDAADF12C42E5E300A90F87 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEDAADF22C42E5E300A90F87 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CEDAAE0B2C42E5E300A90F87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CEDAAE0C2C42E5E300A90F87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEDAAE0E2C42E5E300A90F87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 446HQB2H3T;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Wind App/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.FinanceApp.rashed.Wind-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEDAAE0F2C42E5E300A90F87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 446HQB2H3T;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Wind App/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.FinanceApp.rashed.Wind-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CEDAAE112C42E5E300A90F87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 446HQB2H3T;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.FinanceApp.rashed.Wind-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wind App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Wind App";
+			};
+			name = Debug;
+		};
+		CEDAAE122C42E5E300A90F87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 446HQB2H3T;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.FinanceApp.rashed.Wind-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wind App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Wind App";
+			};
+			name = Release;
+		};
+		CEDAAE142C42E5E300A90F87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 446HQB2H3T;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.FinanceApp.rashed.Wind-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Wind App";
+			};
+			name = Debug;
+		};
+		CEDAAE152C42E5E300A90F87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 446HQB2H3T;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.FinanceApp.rashed.Wind-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Wind App";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEDAADDE2C42E5E200A90F87 /* Build configuration list for PBXProject "Wind App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDAAE0B2C42E5E300A90F87 /* Debug */,
+				CEDAAE0C2C42E5E300A90F87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEDAAE0D2C42E5E300A90F87 /* Build configuration list for PBXNativeTarget "Wind App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDAAE0E2C42E5E300A90F87 /* Debug */,
+				CEDAAE0F2C42E5E300A90F87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEDAAE102C42E5E300A90F87 /* Build configuration list for PBXNativeTarget "Wind AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDAAE112C42E5E300A90F87 /* Debug */,
+				CEDAAE122C42E5E300A90F87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEDAAE132C42E5E300A90F87 /* Build configuration list for PBXNativeTarget "Wind AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDAAE142C42E5E300A90F87 /* Debug */,
+				CEDAAE152C42E5E300A90F87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEDAADDB2C42E5E200A90F87 /* Project object */;
+}
