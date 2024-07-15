@@ -102,3 +102,19 @@ extension UITextField: UITextFieldDelegate {
         return true
     }
 }
+
+
+
+
+extension UITextField {
+    func setPlaceholder(text: String, color: UIColor) {
+        self.attributedPlaceholder = NSAttributedString(
+            string: text,
+            attributes: [
+                .foregroundColor: color,
+                //.font: font
+                // font: UIFont
+            ]
+        )
+    }
+}

@@ -7,6 +7,15 @@
 
 import UIKit
 
+protocol UserDataProvider {
+    var userEmail: String? { get set }
+    var userName: String? { get set }
+    var userWalletAddress: String? { get set }
+    var userProfileImage: String? { get set }
+    var balance: Double? { get set }
+    var currency: String? { get set }
+}
+
 class SendFundOTPViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var headerTtitleLabel: UILabel!
@@ -20,31 +29,25 @@ class SendFundOTPViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var underline2: UIView!
     @IBOutlet weak var underline3: UIView!
     @IBOutlet weak var underline4: UIView!
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var userNameErrorLabel: UILabel!
+    @IBOutlet weak var apiErrorLabel: UILabel!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var loginButtonBottomConstraint: NSLayoutConstraint!
     
+    // MARK: - Properties
+    var userDataProvider: UserDataProvider = UserDataModel()
+    
+    // MARK: - Properties
     var viewModel: LoginViewModel?
     
+    // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        UpdateOTPView()
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        scrollView.addGestureRecognizer(tapGesture)
-        
-        // Register for keyboard notifications
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
-        // Configure username text field
-        NotificationCenter.default.addObserver(self, selector: #selector(validateForm), name: .usernameValidationChanged, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(enableOTPFields), name: .usernameValidationComplete, object: nil)
-        
-        loginButton.isEnabled = false
+        setupView()
+        setupNotifications()
+        loginButton.isUserInteractionEnabled = false
         loginButton.alpha = 0.7
         disableOTPFields()
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -55,36 +58,27 @@ class SendFundOTPViewController: UIViewController, UITextFieldDelegate {
     }
     
     deinit {
-        // Remove notifications
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+        removeNotifications()
+    }
+    
+    // MARK: - Setup Methods
+    private func setupView() {
+        UpdateOTPView()
+    }
+    
+    private func setupNotifications() {
+        setupKeyboardNotifications(continueButtonBottomConstraint: loginButtonBottomConstraint)
+        NotificationCenter.default.addObserver(self, selector: #selector(validateForm), name: .usernameValidationChanged, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(enableOTPFields), name: .usernameValidationComplete, object: nil)
+    }
+    
+    private func removeNotifications() {
+        removeKeyboardNotifications()
         NotificationCenter.default.removeObserver(self, name: .usernameValidationChanged, object: nil)
         NotificationCenter.default.removeObserver(self, name: .usernameValidationComplete, object: nil)
     }
     
-    @objc func keyboardWillShow(_ notification: Notification) {
-        guard let userInfo = notification.userInfo,
-              let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect,
-              let animationDuration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else { return }
-        
-        let keyboardHeight = keyboardFrame.height
-        
-        UIView.animate(withDuration: animationDuration) {
-            self.loginButtonBottomConstraint.constant = keyboardHeight + 20
-            self.view.layoutIfNeeded()
-        }
-    }
-    
-    @objc func keyboardWillHide(_ notification: Notification) {
-        guard let userInfo = notification.userInfo,
-              let animationDuration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else { return }
-        
-        UIView.animate(withDuration: animationDuration) {
-            self.loginButtonBottomConstraint.constant = 20
-            self.view.layoutIfNeeded()
-        }
-    }
-    
+    // MARK: - API Call
     func fetchAPI() {
         let otpString = getOTPString()
         let user = userNameTextField.text ?? ""
@@ -98,29 +92,43 @@ class SendFundOTPViewController: UIViewController, UITextFieldDelegate {
             if success {
                 print("Login successful")
                 if let loginResponse = self.viewModel?.loginResponse {
-                    print(loginResponse.data?.userInfo?.email ?? "")
+                    guard self.userDataProvider != nil else {
+                        return
+                    }
+                    self.userDataProvider.userEmail = loginResponse.data?.userInfo?.email ?? ""
+                    self.userDataProvider.userName = loginResponse.data?.userInfo?.userName ?? ""
+                    self.userDataProvider.userWalletAddress = loginResponse.data?.userInfo?.walletAddress ?? ""
+                    self.userDataProvider.userProfileImage = loginResponse.data?.userInfo?.profileImage ?? ""
+                    self.userDataProvider.balance = loginResponse.data?.accountInfo?.balance ?? 0
+                    self.userDataProvider.currency = loginResponse.data?.accountInfo?.currency ?? ""
+                    push(from: Storyboard.main.rawValue, identifier: ViewControllerIdentifier.sendFundViewController.rawValue) { (viewController: SendFundViewController) in
+                        viewController.userDataProvider = self.userDataProvider
+                    }
                 }
             } else {
-                print("Login failed: \(message ?? "Unknown error")")
                 if let errorResponse = self.viewModel?.errorResponse {
-                    UIAlertController.showAutoDismissAlert(title: "", message: errorResponse.messages[0] , in: self)
+                    self.apiErrorLabel.showAndFadeOut(text: errorResponse.messages[0], font: UIFont.CircularBoldFont(ofSize: 14), color: UIColor(red: 0.88, green: 0.26, blue: 0.26, alpha: 1.00))
                     print(errorResponse.messages)
                 }
             }
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.scrollView.updateContentView()
+    // MARK: - Helper Methods
+    private func getOTPString() -> String {
+        let otpString = "\(textField1.text ?? "")\(textField2.text ?? "")\(textField3.text ?? "")\(textField4.text ?? "")"
+        return otpString
     }
     
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
+    @objc private func enableOTPFields() {
+        [textField1, textField2, textField3, textField4].forEach { $0?.isEnabled = true }
     }
     
+    private func disableOTPFields() {
+        [textField1, textField2, textField3, textField4].forEach { $0?.isEnabled = false }
+    }
     
-    
+    // MARK: - UI Configuration
     func UpdateOTPView() {
         userNameTextField.configureForUsernameValidation()
         headerTtitleLabel.font = UIFont.CircularBoldFont(ofSize: 24)
@@ -130,6 +138,7 @@ class SendFundOTPViewController: UIViewController, UITextFieldDelegate {
         textField1.nextTextField = textField2
         textField2.nextTextField = textField3
         textField3.nextTextField = textField4
+        
         textField2.previousTextField = textField1
         textField3.previousTextField = textField2
         textField4.previousTextField = textField3
@@ -139,65 +148,47 @@ class SendFundOTPViewController: UIViewController, UITextFieldDelegate {
         textField3.underlineView = underline3
         textField4.underlineView = underline4
         
-        [textField1, textField2, textField3, textField4].forEach { textField in
-            textField?.configureForOTP()
-            textField?.delegate = self
-            textField?.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        [textField1, textField2, textField3, textField4].forEach {
+            $0?.configureForOTP()
+            $0?.delegate = self
+            $0?.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         }
         
-        [underline1, underline2, underline3, underline4].forEach { underline in
-            underline?.clipsToBounds = true
-            underline?.layer.cornerRadius = 2
+        [underline1, underline2, underline3, underline4].forEach {
+            $0?.clipsToBounds = true
+            $0?.layer.cornerRadius = 2
         }
     }
     
-    func getOTPString() -> String {
-        let otpString = "\(textField1.text ?? "")\(textField2.text ?? "")\(textField3.text ?? "")\(textField4.text ?? "")"
-        print("OTP String: \(otpString)")
-        return otpString
+    // MARK: - UITextFieldDelegate Methods
+    @objc private func textFieldDidChange(_ textField: UITextField) {
+        validateForm()
     }
     
-    @objc func enableOTPFields() {
-        [textField1, textField2, textField3, textField4].forEach { textField in
-            textField?.isEnabled = true
+    // MARK: - Validation
+    @objc private func validateForm() {
+        let isUsernameValid = userNameTextField.isValidUsername
+        let otpString = getOTPString()
+        let isOTPValid = otpString.count == 4 && otpString.allSatisfy { $0.isNumber }
+        if !isUsernameValid {
+            userNameErrorLabel.showAndFadeOut(text: "Invalid User Name", font: UIFont.CircularBoldFont(ofSize: 14), color: UIColor(red: 0.88, green: 0.26, blue: 0.26, alpha: 1.00))
         }
+        let formIsValid = isUsernameValid && isOTPValid
+        loginButton.isUserInteractionEnabled = formIsValid
+        loginButton.alpha = formIsValid ? 1.0 : 0.7
     }
     
-    func disableOTPFields() {
-        [textField1, textField2, textField3, textField4].forEach { textField in
-            textField?.isEnabled = false
-        }
+    // MARK: - Actions
+    @IBAction func onTapContinueButton(_ sender: Any) {
+        view.endEditing(true)
+        fetchAPI()
     }
     
+    // MARK: - Touch Handling
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first
         if let view = touch?.view, !(view is UITextField) {
             view.endEditing(true)
         }
-    }
-    
-    @IBAction func onTapContinueButton(_ sender: Any) {
-        fetchAPI()
-    }
-    
-    @objc private func validateForm() {
-        let isUsernameValid = userNameTextField.isValidUsername
-        let otpString = getOTPString()
-        let isOTPValid = otpString.count == 4 && otpString.allSatisfy { $0.isNumber }
-        if isUsernameValid {
-            print("It's valid and it's true")
-        } else {
-            //UIAlertController.showAutoDismissAlert(title: "", message: "Invalid User Name", in: self)
-            print("It's not valid and it's false")
-        }
-        print("Username valid: \(isUsernameValid), OTP valid: \(isOTPValid), OTP: \(otpString)")
-        let formIsValid = isUsernameValid && isOTPValid
-        loginButton.isEnabled = formIsValid
-        loginButton.alpha = formIsValid ? 1.0 : 0.7
-    }
-    
-    @objc func textFieldDidChange(_ textField: UITextField) {
-        print("Text field \(textField.tag) changed to: \(textField.text ?? "")")
-        validateForm()
     }
 }

@@ -1,3 +1,4 @@
+
 import UIKit
 
 extension UITextField {
@@ -47,15 +48,17 @@ extension UITextField {
             return
         }
         
-        let regex = "^(?!.*[_.]{2})[a-z0-9._]{3,32}$"
-        let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
-        let isValidLength = text.count >= 3 && text.count <= 32
-        let containsLetter = text.rangeOfCharacter(from: .letters) != nil
-        let startsWithLetter = text.prefix(1).rangeOfCharacter(from: .letters) != nil
+        let containsAtLeastOneAlphabet = text.range(of: "[a-zA-Z]", options:.regularExpression) != nil
+        let hasThreeCharacters = text.count >= 3
+        let hasNoNumberInFirstThreeCharacters = text.prefix(3).range(of: "[0-9]", options:.regularExpression) == nil
+        let doesNotContainSpecialCharsExceptDotAndUnderscore = text.range(of: "[^a-zA-Z0-9._]", options:.regularExpression) == nil
+        let doesNotContainConsecutiveDots = text.range(of: "\\.{2,}", options:.regularExpression) == nil
+        let doesNotContainConsecutiveUnderscores = text.range(of: "_{2,}", options:.regularExpression) == nil
+        let isValidLength = text.count <= 32
         
-        isValidUsername = predicate.evaluate(with: text) && isValidLength && containsLetter && startsWithLetter
+        isValidUsername = containsAtLeastOneAlphabet && hasThreeCharacters && hasNoNumberInFirstThreeCharacters && doesNotContainSpecialCharsExceptDotAndUnderscore && doesNotContainConsecutiveDots && doesNotContainConsecutiveUnderscores && isValidLength
         print("Username valid: \(isValidUsername)")
-        NotificationCenter.default.post(name: .usernameValidationComplete, object: self)
+        NotificationCenter.default.post(name:.usernameValidationComplete, object: self)
     }
 }
 
@@ -63,3 +66,6 @@ extension Notification.Name {
     static let usernameValidationChanged = Notification.Name("usernameValidationChanged")
     static let usernameValidationComplete = Notification.Name("usernameValidationComplete")
 }
+
+
+
