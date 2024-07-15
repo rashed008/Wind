@@ -74,7 +74,7 @@ class SendFundViewController: UIViewController, UITextFieldDelegate {
     }
     
     // MARK: - Helper Methods
-    private func toggleMaxBalance() {
+    func toggleMaxBalance() {
         let newImageName = isShowingImageOne ? "maxBtnSelected" : "maxBtn"
         maxBalanceButton.setImage(UIImage(named: newImageName), for: .normal)
         
@@ -86,13 +86,13 @@ class SendFundViewController: UIViewController, UITextFieldDelegate {
         continueButton.alpha = isShowingImageOne ? 0.50 : 1.00
     }
     
-    private func updateContinueButton(alpha: CGFloat) {
+    func updateContinueButton(alpha: CGFloat) {
         DispatchQueue.main.async {
             self.continueButton.backgroundColor = UIColor(red: 0.43, green: 0.31, blue: 1.00, alpha: alpha)
         }
     }
     
-    private func updateBalanceDisplay(with text: String) {
+    func updateBalanceDisplay(with text: String) {
         let inputValue = Double(text) ?? 0
         let balance = userDataProvider?.balance ?? 0
         

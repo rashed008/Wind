@@ -46,7 +46,7 @@ class SendFundOTPViewController: UIViewController, UITextFieldDelegate {
         setupView()
         setupNotifications()
         loginButton.isUserInteractionEnabled = false
-        loginButton.alpha = 0.7
+        loginButton.alpha = 0.50
         disableOTPFields()
     }
     
@@ -120,7 +120,7 @@ class SendFundOTPViewController: UIViewController, UITextFieldDelegate {
         return otpString
     }
     
-    @objc private func enableOTPFields() {
+    @objc func enableOTPFields() {
         [textField1, textField2, textField3, textField4].forEach { $0?.isEnabled = true }
     }
     
@@ -166,7 +166,7 @@ class SendFundOTPViewController: UIViewController, UITextFieldDelegate {
     }
     
     // MARK: - Validation
-    @objc private func validateForm() {
+    @objc func validateForm() {
         let isUsernameValid = userNameTextField.isValidUsername
         let otpString = getOTPString()
         let isOTPValid = otpString.count == 4 && otpString.allSatisfy { $0.isNumber }
@@ -175,7 +175,7 @@ class SendFundOTPViewController: UIViewController, UITextFieldDelegate {
         }
         let formIsValid = isUsernameValid && isOTPValid
         loginButton.isUserInteractionEnabled = formIsValid
-        loginButton.alpha = formIsValid ? 1.0 : 0.7
+        loginButton.alpha = formIsValid ? 1.0 : 0.50
     }
     
     // MARK: - Actions

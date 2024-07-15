@@ -18,6 +18,8 @@
 		CE536F812C4478FD00D066B7 /* ExtensionUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE536F802C4478FD00D066B7 /* ExtensionUIViewController.swift */; };
 		CE536F832C44793600D066B7 /* ViewControllerEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE536F822C44793600D066B7 /* ViewControllerEnum.swift */; };
 		CE536F852C4479A400D066B7 /* SendFundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE536F842C4479A400D066B7 /* SendFundViewController.swift */; };
+		CEA9BB162C45C8180036F6C5 /* SendFundOTPViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA9BB152C45C8180036F6C5 /* SendFundOTPViewControllerTests.swift */; };
+		CEA9BB182C45DE0B0036F6C5 /* SendFundViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA9BB172C45DE0B0036F6C5 /* SendFundViewControllerTests.swift */; };
 		CEDAADE72C42E5E200A90F87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDAADE62C42E5E200A90F87 /* AppDelegate.swift */; };
 		CEDAADE92C42E5E200A90F87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDAADE82C42E5E200A90F87 /* SceneDelegate.swift */; };
 		CEDAADEB2C42E5E200A90F87 /* SendFundOTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDAADEA2C42E5E200A90F87 /* SendFundOTPViewController.swift */; };
@@ -72,6 +74,8 @@
 		CE536F802C4478FD00D066B7 /* ExtensionUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIViewController.swift; sourceTree = "<group>"; };
 		CE536F822C44793600D066B7 /* ViewControllerEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerEnum.swift; sourceTree = "<group>"; };
 		CE536F842C4479A400D066B7 /* SendFundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFundViewController.swift; sourceTree = "<group>"; };
+		CEA9BB152C45C8180036F6C5 /* SendFundOTPViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFundOTPViewControllerTests.swift; sourceTree = "<group>"; };
+		CEA9BB172C45DE0B0036F6C5 /* SendFundViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFundViewControllerTests.swift; sourceTree = "<group>"; };
 		CEDAADE32C42E5E200A90F87 /* Wind App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wind App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDAADE62C42E5E200A90F87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEDAADE82C42E5E200A90F87 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +172,8 @@
 			isa = PBXGroup;
 			children = (
 				CEDAADFD2C42E5E300A90F87 /* Wind_AppTests.swift */,
+				CEA9BB152C45C8180036F6C5 /* SendFundOTPViewControllerTests.swift */,
+				CEA9BB172C45DE0B0036F6C5 /* SendFundViewControllerTests.swift */,
 			);
 			path = "Wind AppTests";
 			sourceTree = "<group>";
@@ -500,7 +506,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA9BB182C45DE0B0036F6C5 /* SendFundViewControllerTests.swift in Sources */,
 				CEDAADFE2C42E5E300A90F87 /* Wind_AppTests.swift in Sources */,
+				CEA9BB162C45C8180036F6C5 /* SendFundOTPViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
