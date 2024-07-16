@@ -32,7 +32,7 @@ class SendFundViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUppUI()
+        setUpUI()
         setupKeyboardNotifications(continueButtonBottomConstraint: continueButtonButtomConstraint)
         setBalanceTextField.delegate = self
         updateUserData()
@@ -43,7 +43,7 @@ class SendFundViewController: UIViewController, UITextFieldDelegate {
     }
     
     // MARK: - Setup Methods
-    private func setUppUI() {
+    private func setUpUI() {
         userInfoView.applyCornerRadius(10)
         userInfoView.applyShadow(radius: 2.0, opacity: 0.2, offset: CGSize(width: 0, height: 1), color: .black)
         
@@ -101,7 +101,7 @@ class SendFundViewController: UIViewController, UITextFieldDelegate {
                 self.insufficientBalanceErrorLabel.isHidden = false
                 self.addFundButton.isHidden = false
                 self.addFundButton.alpha = 0.95
-                self.addFundButton.isEnabled = false
+                //self.addFundButton.isEnabled = false
                 self.continueButton.alpha = 0.50
                 self.view.endEditing(true)
             }
@@ -112,7 +112,7 @@ class SendFundViewController: UIViewController, UITextFieldDelegate {
                 self.insufficientBalanceErrorLabel.isHidden = true
                 self.addFundButton.isHidden = true
                 self.addFundButton.alpha = 1
-                self.addFundButton.isEnabled = true
+                //self.addFundButton.isEnabled = true
                 self.continueButton.alpha = 1.00
             }
         }

@@ -155,7 +155,6 @@
 			isa = PBXGroup;
 			children = (
 				CEDAAE1D2C42EBE100A90F87 /* Application */,
-				CEDAAE1C2C42EBDF00A90F87 /* Constant */,
 				CEDAAE1B2C42EBDB00A90F87 /* Extensions */,
 				CEDAAE1A2C42EBD700A90F87 /* Utility */,
 				CEDAAE192C42EBD500A90F87 /* Helper */,
@@ -249,13 +248,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		CEDAAE1C2C42EBDF00A90F87 /* Constant */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Constant;
-			sourceTree = "<group>";
-		};
 		CEDAAE1D2C42EBE100A90F87 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,7 +269,6 @@
 			isa = PBXGroup;
 			children = (
 				CEDAAE222C42EC7500A90F87 /* Controller */,
-				CEDAAE212C42EC7100A90F87 /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -290,13 +281,6 @@
 				CE3538D52C45373200C4B76D /* UserDataProvider.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		CEDAAE212C42EC7100A90F87 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		CEDAAE222C42EC7500A90F87 /* Controller */ = {

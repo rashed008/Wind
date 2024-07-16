@@ -79,7 +79,7 @@ class SendFundOTPViewController: UIViewController, UITextFieldDelegate {
     }
     
     // MARK: - API Call
-    func fetchAPI() {
+    func fetchLoginAPI() {
         let otpString = getOTPString()
         let user = userNameTextField.text ?? ""
         let pin = otpString
@@ -90,7 +90,6 @@ class SendFundOTPViewController: UIViewController, UITextFieldDelegate {
         viewModel?.performLogin { [weak self] success, message in
             guard let self = self else { return }
             if success {
-                print("Login successful")
                 if let loginResponse = self.viewModel?.loginResponse {
                     guard self.userDataProvider != nil else {
                         return
@@ -181,7 +180,7 @@ class SendFundOTPViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Actions
     @IBAction func onTapContinueButton(_ sender: Any) {
         view.endEditing(true)
-        fetchAPI()
+        fetchLoginAPI()
     }
     
     // MARK: - Touch Handling

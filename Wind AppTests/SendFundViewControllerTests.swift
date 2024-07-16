@@ -36,8 +36,8 @@ final class SendFundViewControllerTests: XCTestCase {
         mockUserDataProvider = nil
         super.tearDown()
     }
-
-    func testViewDidLoad() {
+    
+    func test_ViewDidLoad() {
         viewController.viewDidLoad()
         XCTAssertNotNil(viewController.setBalanceTextField.delegate)
         XCTAssertEqual(viewController.setBalanceTextField.font, UIFont.CircularBoldFont(ofSize: 48))
@@ -46,7 +46,7 @@ final class SendFundViewControllerTests: XCTestCase {
         XCTAssertTrue(viewController.addFundButton.isHidden)
     }
     
-    func testToggleMaxBalance() {
+    func test_ToggleMaxBalance() {
         mockUserDataProvider.balance = 100.0
         viewController.setBalanceTextField.text = ""
         viewController.toggleMaxBalance()
@@ -55,7 +55,7 @@ final class SendFundViewControllerTests: XCTestCase {
         XCTAssertEqual(viewController.continueButton.alpha, 1.00)
     }
     
-    func testUpdateBalanceDisplayWithInsufficientBalance() {
+    func test_UpdateBalanceDisplayWithInsufficientBalance() {
         mockUserDataProvider.balance = 100.0
         let expectation = XCTestExpectation(description: "UI updates")
         viewController.updateBalanceDisplay(with: "150")
@@ -68,7 +68,7 @@ final class SendFundViewControllerTests: XCTestCase {
         wait(for: [expectation], timeout: 1.0)
     }
     
-    func testUpdateBalanceDisplayWithSufficientBalance() {
+    func test_UpdateBalanceDisplayWithSufficientBalance() {
         mockUserDataProvider.balance = 100.0
         viewController.updateBalanceDisplay(with: "50")
         XCTAssertTrue(viewController.insufficientBalanceErrorLabel.isHidden)
@@ -77,7 +77,7 @@ final class SendFundViewControllerTests: XCTestCase {
         XCTAssertEqual(viewController.continueButton.alpha, 0.50)
     }
     
-    func testTextFieldShouldChangeCharacters() {
+    func test_TextFieldShouldChangeCharacters() {
         let textField = viewController.setBalanceTextField
         let range = NSRange(location: 0, length: 0)
         let result = viewController.textField(textField!, shouldChangeCharactersIn: range, replacementString: "50")
